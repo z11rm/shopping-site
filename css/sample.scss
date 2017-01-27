@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+$ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
+$backgray : #f9f8f6;
+$gray1 : #887f69; //koi
+$gray2 : #b0b0b0;
+$winered : #9d1a2d;
+
+html{
+  font-size: 62.5%;
+  background:$backgray;
+}
+
+@mixin fontsize($size: 24, $base: 10) {
+  font-size: $size + px;
+  font-size: ($size / $base) * 1rem;
+}
+
+
+header{
+    #header_in{
+        padding-top: 10px;
+        padding-bottom:4px;
+    }
+    @media(max-width:550px){
+        .logo{
+            width:190px;
+        }
+        .navi{
+            width:40px;
+            float:right;
+        }
+    }
+    .sp_navi{
+        text-align:center;
+    }
+    .sp_navi_li{
+        width:180px;
+        position:absolute;
+        top:50px;
+        right:2%;
+        border:1px solid #eee;
+        background:white;
+        margin:2px;
+        padding:0;
+        display:none;
+        z-index:100;
+        
+        li{
+            list-style:none;
+            margin:0;
+            padding:0;
+            a{
+                display:block; 
+                padding:10px 8px;
+                border-bottom:1px solid #eee;
+                font-size:14px;
+                text-decoration:none;
+            }
+        }
+    }//sp_navi_li
+    
+    @media(min-width:550px){
+        .sp_navi{
+            display:none;
+        }
+        #header_in{
+            padding:15px 0 10px 0;
+        }
+        .pc_navi_li{
+            margin:0;
+            padding:0;
+            li{
+                list-style:none;
+                margin:5px 0 0 0;
+                padding:0;
+                a{
+                    color:$gray1;
+                    text-decoration:none;
+                    font-weight:bold;
+                    @include fontsize(14);
+                    float: left;
+                    padding-right: 10px;
+                }
+                a:hover{
+                    color:$winered;
+                }
+            } //li
+        }//.pc_navi_li
+    }//min-width:550px
+    @media(max-width:550px){
+        .pc_navi{
+            display:none;
+        }
+    }//max-width:550px
+}//header

@@ -1,0 +1,63 @@
+html {
+  font-size: 62.5%;
+  background: #f9f8f6; }
+
+header #header_in {
+  padding-top: 10px;
+  padding-bottom: 4px; }
+@media (max-width: 550px) {
+  header .logo {
+    width: 190px; }
+  header .navi {
+    width: 40px;
+    float: right; } }
+header .sp_navi {
+  text-align: center; }
+header .sp_navi_li {
+  width: 180px;
+  position: absolute;
+  top: 50px;
+  right: 2%;
+  border: 1px solid #eee;
+  background: white;
+  margin: 2px;
+  padding: 0;
+  display: none;
+  z-index: 100; }
+  header .sp_navi_li li {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    header .sp_navi_li li a {
+      display: block;
+      padding: 10px 8px;
+      border-bottom: 1px solid #eee;
+      font-size: 14px;
+      text-decoration: none; }
+@media (min-width: 550px) {
+  header .sp_navi {
+    display: none; }
+  header #header_in {
+    padding: 15px 0 10px 0; }
+  header .pc_navi_li {
+    margin: 0;
+    padding: 0; }
+    header .pc_navi_li li {
+      list-style: none;
+      margin: 5px 0 0 0;
+      padding: 0; }
+      header .pc_navi_li li a {
+        color: #887f69;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+        font-size: 1.4rem;
+        float: left;
+        padding-right: 10px; }
+      header .pc_navi_li li a:hover {
+        color: #9d1a2d; } }
+@media (max-width: 550px) {
+  header .pc_navi {
+    display: none; } }
+
+/*# sourceMappingURL=sample.css.map */
