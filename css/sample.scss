@@ -7,11 +7,11 @@ $gray1 : #887f69; //koi
 $gray2 : #b0b0b0;
 $winered : #9d1a2d;
 
-html{
+html {
   font-size: 62.5%;
-  background:$backgray;
+  background: $backgray;
   font-family: $myfont;
-  background-color:$backgray;
+  background-color: $backgray;
 }
 
 @mixin fontsize($size: 24, $base: 10) {
@@ -21,65 +21,65 @@ html{
 
 
 header{
-    text-align:center;
+    text-align: center;
     #header_in{
-        text-align:left;
+        text-align: left;
         padding-top: 10px;
-        padding-bottom:4px;
+        padding-bottom: 4px;
     }
     @media(max-width:550px){
         .logo{
             text-align: center;
         }
         .navi{
-            display:none;
+            display: none;
         }
     }
     .sp_navi{
-        text-align:center;
+        text-align: center;
         a img{
-            margin:7px;
+            margin: 7px;
         }
     }
     .sp_navi_li{
-        width:180px;
-        position:absolute;
-        top:50px;
-        right:2%;
-        border:1px solid #eee;
-        background:white;
-        margin:2px;
-        padding:0;
-        display:none;
-        z-index:100;
+        width: 180px;
+        position: absolute;
+        top: 50px;
+        right: 2%;
+        border: 1px solid #eee;
+        background: white;
+        margin: 2px;
+        padding: 0;
+        display: none;
+        z-index: 100;
         
         li{
-            list-style:none;
-            margin:0;
-            padding:0;
+            list-style: none;
+            margin: 0;
+            padding: 0;
             a{
-                display:block; 
-                padding:10px 8px;
-                border-bottom:1px solid #eee;
-                font-size:14px;
-                text-decoration:none;
+                display: block; 
+                padding: 10px 8px;
+                border-bottom: 1px solid #eee;
+                font-size: 14px;
+                text-decoration: none;
             }
         }
     }//sp_navi_li
-    @media(min-width:550px){
-        .sp_navi{
-            display:none;
+    @media(min-width:550px) {
+        .sp_navi {
+            display: none;
         }
-        #header_in{
-            padding:15px 0 10px 0;
+        #header_in {
+            padding: 15px 0 10px 0;
         }
         .pc_navi_li{
-            margin:0 0;
-            padding:0;
-            li{
-                list-style:none;
-                margin:15px 0 0 0;
-                padding:0;
+            margin: 0 0;
+            padding: 0;
+            li {
+                list-style: none;
+                margin: 15px 0 0 0;
+                padding: 0;
                  a{
                     float: left;
                     padding-right: 10px;
@@ -99,30 +99,30 @@ header{
     font-size:62.5%;
 }
 #cover_area{
-    text-align:center;
-    padding:70px;
-    max-width:550px;
+    text-align: center;
+    padding: 70px;
+    max-width: 550px;
     background-image: url("../images/top/ca_banner.jpg");
-    background-size:cover;
+    background-size: cover;
     @media (min-width: 550px) {
         text-align: left;
         padding: 150px;
       } // min-width: 550px
 }//cover_area
-.sub_title{
-    text-align: center;
-    font-size: 2.5em;
-    color: #887f69;
-    font-weight: bold;
-    letter-spacing:1px;
-    margin:15px 0;
+
+.sp_subtitle{
+    display: block;
+    margin: auto;
+    padding: 10px;
+
     @media(min-width:550px){
-        display:none;
+        display: none;
     }
 }//sub_title
 .pc_subtitle{
-    width:100%;
-    margin: 10px;
+    display: block;
+    width: 100%;
+    margin: 20px;
     @media(max-width: 550px){
         display:none;
     }
@@ -130,7 +130,7 @@ header{
 
 .item_boxs{
     color: black;
-    max-width:100%;
+    width:100%;
     margin: 0;
     padding: 10px;
     display: table;
@@ -140,7 +140,7 @@ header{
         background-color: white;
         max-width: 45%;
         display: inline-block;
-        font-size: 1.6rem;
+        font-size: 1.0rem;
         text-decoration: none;
         padding:5px;
         p{
@@ -149,7 +149,7 @@ header{
     }
     @media (min-width: 550px) {
         li{
-            max-width: 30%;
+            width: 30%;
         }
     }// min-width: 550px
 }//item_boxs
@@ -171,17 +171,17 @@ header{
         padding:5px;
         vertical-align: top;
         .guide_title{
-            font-size:1.8rem;
+            font-size: 1.8rem;
             color: $gray1;
-            font-weight:bold;
-            padding-bottom:10px;
+            font-weight: bold;
+            margin-bottom: 7px;
         }
         .guide_sub_title{
-            margin:0;
+            margin: 0;
             font-size:1.5rem;
             color: $gray1;
-            font-weight:bold;
-            padding-bottom:2px;
+            font-weight: bold;
+            margin-bottom: 5px;
         }
         .guide_sub_title:before{
             content:'■';
@@ -191,12 +191,50 @@ header{
     }
     @media (min-width: 550px) {
         li{
-            max-width: 45%;
+            width: 45%;
+            
         }
     }// min-width: 550px
 }//guide_boxs
 
+#sidebar{
+    background-color: white;
+    width: 100%;
+    display: inline-block;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.search{
+    color: $gray1;
+    text-align: left;
+    float: left;
+}
+.search_icon{
+    text-align: right;
+}
+.search_bar{
+    background-color: #eeeeee;
+    padding: 0.5em;
+    margin: 8px 0;
+    border-style: solid;
+    border-width: 13px;
+    border-color: white;
+}
+.bar_title{
+    text-align: left;
+    background-color: $gray1;
+    color: white;
+    font-size: 1.4rem;
+    padding: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
 h1{
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }

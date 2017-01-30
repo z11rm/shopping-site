@@ -101,23 +101,21 @@ header .sp_navi_li li a {
   }
 }
 
-.sub_title {
-  text-align: center;
-  font-size: 2.5em;
-  color: #887f69;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin: 15px 0;
+.sp_subtitle {
+  display: block;
+  margin: auto;
+  padding: 10px;
 }
 @media (min-width: 550px) {
-  .sub_title {
+  .sp_subtitle {
     display: none;
   }
 }
 
 .pc_subtitle {
+  display: block;
   width: 100%;
-  margin: 10px;
+  margin: 20px;
 }
 @media (max-width: 550px) {
   .pc_subtitle {
@@ -127,7 +125,7 @@ header .sp_navi_li li a {
 
 .item_boxs {
   color: black;
-  max-width: 100%;
+  width: 100%;
   margin: 0;
   padding: 10px;
   display: table;
@@ -138,7 +136,7 @@ header .sp_navi_li li a {
   background-color: white;
   max-width: 45%;
   display: inline-block;
-  font-size: 1.6rem;
+  font-size: 1.0rem;
   text-decoration: none;
   padding: 5px;
 }
@@ -147,7 +145,7 @@ header .sp_navi_li li a {
 }
 @media (min-width: 550px) {
   .item_boxs li {
-    max-width: 30%;
+    width: 30%;
   }
 }
 
@@ -173,22 +171,61 @@ header .sp_navi_li li a {
   font-size: 1.8rem;
   color: #887f69;
   font-weight: bold;
-  padding-bottom: 10px;
+  margin-bottom: 7px;
 }
 .guide_boxs li .guide_sub_title {
   margin: 0;
   font-size: 1.5rem;
   color: #887f69;
   font-weight: bold;
-  padding-bottom: 2px;
+  margin-bottom: 5px;
 }
 .guide_boxs li .guide_sub_title:before {
   content: '■';
 }
 @media (min-width: 550px) {
   .guide_boxs li {
-    max-width: 45%;
+    width: 45%;
   }
+}
+
+#sidebar {
+  background-color: white;
+  width: 100%;
+  display: inline-block;
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.search {
+  color: #887f69;
+  text-align: left;
+  float: left;
+}
+
+.search_icon {
+  text-align: right;
+}
+
+.search_bar {
+  background-color: #eeeeee;
+  padding: 0.5em;
+  margin: 8px 0;
+  border-style: solid;
+  border-width: 13px;
+  border-color: white;
+}
+
+.bar_title {
+  text-align: left;
+  background-color: #887f69;
+  color: white;
+  font-size: 1.4rem;
+  padding: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 h1 {
