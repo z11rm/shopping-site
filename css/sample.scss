@@ -1,6 +1,7 @@
 @charset "utf-8";
+@import "compass";
 
-$ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
+$myfont :"Avenir Next", Verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, Osaka, sans-serif;
 $backgray : #f9f8f6;
 $gray1 : #887f69; //koi
 $gray2 : #b0b0b0;
@@ -9,6 +10,8 @@ $winered : #9d1a2d;
 html{
   font-size: 62.5%;
   background:$backgray;
+  font-family: $myfont;
+  background-color:$backgray;
 }
 
 @mixin fontsize($size: 24, $base: 10) {
@@ -18,21 +21,25 @@ html{
 
 
 header{
+    text-align:center;
     #header_in{
+        text-align:left;
         padding-top: 10px;
         padding-bottom:4px;
     }
     @media(max-width:550px){
         .logo{
-            width:190px;
+            text-align: center;
         }
         .navi{
-            width:40px;
-            float:right;
+            display:none;
         }
     }
     .sp_navi{
         text-align:center;
+        a img{
+            margin:7px;
+        }
     }
     .sp_navi_li{
         width:180px;
@@ -59,7 +66,6 @@ header{
             }
         }
     }//sp_navi_li
-    
     @media(min-width:550px){
         .sp_navi{
             display:none;
@@ -68,29 +74,129 @@ header{
             padding:15px 0 10px 0;
         }
         .pc_navi_li{
-            margin:0;
+            margin:0 0;
             padding:0;
             li{
                 list-style:none;
-                margin:5px 0 0 0;
+                margin:15px 0 0 0;
                 padding:0;
-                a{
-                    color:$gray1;
-                    text-decoration:none;
-                    font-weight:bold;
-                    @include fontsize(14);
+                 a{
                     float: left;
                     padding-right: 10px;
-                }
-                a:hover{
-                    color:$winered;
                 }
             } //li
         }//.pc_navi_li
     }//min-width:550px
-    @media(max-width:550px){
-        .pc_navi{
-            display:none;
-        }
-    }//max-width:550px
 }//header
+
+#contents{
+    padding-top:10px;
+    @media (min-width: 550px) {
+        padding-top: 20px;
+    }// min-width: 550px
+}
+#main{
+    font-size:62.5%;
+}
+#cover_area{
+    text-align:center;
+    padding:70px;
+    max-width:550px;
+    background-image: url("../images/top/ca_banner.jpg");
+    background-size:cover;
+    @media (min-width: 550px) {
+        text-align: left;
+        padding: 150px;
+      } // min-width: 550px
+}//cover_area
+.sub_title{
+    text-align: center;
+    font-size: 2.5em;
+    color: #887f69;
+    font-weight: bold;
+    letter-spacing:1px;
+    margin:15px 0;
+    @media(min-width:550px){
+        display:none;
+    }
+}//sub_title
+.pc_subtitle{
+    width:100%;
+    margin: 10px;
+    @media(max-width: 550px){
+        display:none;
+    }
+}//pc_subtitle
+
+.item_boxs{
+    color: black;
+    max-width:100%;
+    margin: 0;
+    padding: 10px;
+    display: table;
+    table-layout: fixed;
+    text-align: left;
+    li{
+        background-color: white;
+        max-width: 45%;
+        display: inline-block;
+        font-size: 1.6rem;
+        text-decoration: none;
+        padding:5px;
+        p{
+            margin: 1px 0;
+        }
+    }
+    @media (min-width: 550px) {
+        li{
+            max-width: 30%;
+        }
+    }// min-width: 550px
+}//item_boxs
+
+.guide_boxs{
+    color: black;
+    max-width:100%;
+    margin: 0;
+    padding: 10px;
+    display: table;
+    table-layout: fixed;
+    text-align: left;
+    li{
+        background-color: white;
+        width: 100%;
+        display: inline-block;
+        font-size: 1.2rem;
+        text-decoration: none;
+        padding:5px;
+        vertical-align: top;
+        .guide_title{
+            font-size:1.8rem;
+            color: $gray1;
+            font-weight:bold;
+            padding-bottom:10px;
+        }
+        .guide_sub_title{
+            margin:0;
+            font-size:1.5rem;
+            color: $gray1;
+            font-weight:bold;
+            padding-bottom:2px;
+        }
+        .guide_sub_title:before{
+            content:'■';
+        }
+        p{
+        }
+    }
+    @media (min-width: 550px) {
+        li{
+            max-width: 45%;
+        }
+    }// min-width: 550px
+}//guide_boxs
+
+h1{
+    margin:0;
+    padding:0;
+}
