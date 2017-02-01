@@ -11,9 +11,11 @@
   <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
   <!-- jQuery -->
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <!-- Owl Carousel JS -->
-  <script src="owlcarousel/owl.carousel.min.js"></script>
   <script src="style.js"></script>
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="style.js" charset="Shift_JIS"></script>
+
+
 
   <!-- Mobile Specific Metas–––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -107,7 +109,7 @@
                       <p class="item_yen">￥10,000　(tax in)</p>
                     </li>
                   </ul> 
-                  
+                </div>
                   <div id="popular_item">
                     <img class="sp_subtitle" src="images/top_sp/title_popular.png" class="u-max-full-width" srcset="images/top_sp/title_popular@2x.png 2x">
                     <img class="pc_subtitle" src="images/top/title_popular.png" class="u-max-full-width">
@@ -167,32 +169,35 @@
                       </li>
                     </ul>
                   </div>
-                  
               </div> <!--main-->
               <div class="three columns">
                   <div id="search">
                     <img class="pc_subtitle" src="images/top/itemsearch.png" class="u-max-full-width">
                     <div class="search_bar"><p class="search">Search...</p><div class="search_icon"><img src="images/top/search_icon.png"></div></div>
                   </div><!--search-->
+                  
                   <div id="sidebar">
-                    <div id="pagelink">
-                      <h2 class="bar_title">ページリンク</h2>
-                      <ul>
-                        <li>page1</li>
-                        <li>page2</li>
-                      </ul>
-                    </div><!--pagelink-->
+                      <div class="oritatami_box">
+                        <h2 class="oritatami_title"> ページリンク</h2>
+                        <div class="oritatami">
+                          <dl>
+                          <dt>page1</dt>
+                          <dt>page2</dt>
+                          </dl>
+                      </div>
+                    </div>
                     
-                    <div id="category">
-                      <h2 class="bar_title">CATEGORY</h2>
-                      <ul>
-                        <li>カテゴリー名</li>
-                        <li>カテゴリー名</li>
-                        <li>カテゴリー名</li>
-                        <li>カテゴリー名</li>
-                        <li>カテゴリー名</li>
-                      </ul>
-                    </div><!--category-->
+                    <div class="oritatami_box">
+                        <h2 class="oritatami_title">CATEGORY</h2>
+                        <div class="oritatami">
+                          <dl>
+                          <dt>カテゴリー名</dt>
+                          <dt>カテゴリー名</dt>
+                          <dt>カテゴリー名</dt>
+                          <dt>カテゴリー名</dt>
+                          </dl>
+                      </div>
+                    </div>
                     
                     <div id="about">
                       <h2 class="about_title">ABOUT</h2>
@@ -212,7 +217,7 @@
                       </div>
                     </div><!--shopinfo-->
                   </div><!--sidebar-->
-              </div>
+              </div><!--three columns-->
           </div><!--row-->
       </div><!--container-->
   </div><!--contents-->
