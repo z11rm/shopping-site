@@ -28,10 +28,14 @@ header .sp_navi {
 header .sp_navi a img {
   margin: 7px;
 }
+header .sp_navi_btn {
+  margin: 7px;
+  cursor: pointer;
+}
 header .sp_navi_li {
   width: 180px;
   position: absolute;
-  top: 50px;
+  top: 80px;
   right: 2%;
   border: 1px solid #eee;
   background: white;
@@ -71,6 +75,10 @@ header .sp_navi_li li a {
   header .pc_navi_li li a {
     float: left;
     padding-right: 10px;
+  }
+  header .pc_navi_li li img:hover {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
   }
 }
 
@@ -140,12 +148,49 @@ header .sp_navi_li li a {
   text-decoration: none;
   padding: 5px;
 }
+@media (max-width: 550px) {
+  .item_boxs li .mask, .item_boxs li .caption {
+    display: none;
+  }
+}
 .item_boxs li p {
   margin: 1px 0;
 }
 @media (min-width: 550px) {
   .item_boxs li {
     width: 30%;
+    height: auto;
+  }
+  .item_boxs li .item_img {
+    overflow: hidden;
+    position: relative;
+  }
+  .item_boxs li .item_img .caption {
+    font-size: 2.0rem;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 40%;
+    letter-spacing: 2px;
+  }
+  .item_boxs li .item_img .mask {
+    width: 100%;
+    height: 97%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+  }
+  .item_boxs li .item_img:hover .mask {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    opacity: 1;
+    /* ホバーで表示する */
   }
 }
 
@@ -189,39 +234,30 @@ header .sp_navi_li li a {
   }
 }
 
-.search {
+#search {
   color: #887f69;
   text-align: left;
   float: left;
+  background-color: white;
+  width: 100%;
 }
-
-.search_icon {
-  text-align: right;
+#search img {
+  margin: 0 5px;
+  width: 50%;
+}
+@media (max-width: 550px) {
+  #search img {
+    display: none;
+  }
 }
 
 .search_bar {
-  background-color: #eeeeee;
+  height: 30px;
   padding: 0.5em;
-  margin: 8px 0;
-  border-style: solid;
-  border-width: 13px;
-  border-color: white;
+  margin: 10px;
+  background: #f9f8f6 url("../images/top/search_icon.png") 95% 50% no-repeat;
 }
 
-/* .bar_title{
-    text-align: left;
-    background-color: $gray1;
-    color: white;
-    font-size: 1.0rem;
-    padding: 10px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    &:after{
-        position: absolute;
-        content: url("../images/top/next_icon.png");
-        right: 10px;
-    }
-}*/
 #sidebar {
   position: relative;
   width: 100%;
@@ -246,7 +282,6 @@ header .sp_navi_li li a {
   color: white;
   letter-spacing: 2px;
   font-size: 1.0rem;
-  width: 95%;
   height: 40px;
   line-height: 40px;
   border: none;
@@ -258,14 +293,13 @@ header .sp_navi_li li a {
 
 .oritatami {
   display: block;
-  width: 100%;
   margin: 0;
   padding: 0;
 }
 .oritatami dl {
   list-style-type: none;
   display: inline-block;
-  width: 100%;
+  width: 94%;
   margin: 0;
   padding: 0;
 }
@@ -286,6 +320,11 @@ header .sp_navi_li li a {
   background: #887f69 url("../images/top/down_icon.png") 95% 50% no-repeat;
 }
 
+#about, #shopinfo {
+  display: inline-block;
+  background: white;
+}
+
 .about_title, .shop_title {
   clear: both;
   text-align: left;
@@ -299,7 +338,7 @@ header .sp_navi_li li a {
 }
 
 .about_image, .shop_image {
-  width: 48%;
+  width: 45%;
   float: left;
   margin-right: 5px;
 }
@@ -311,6 +350,12 @@ header .sp_navi_li li a {
 }
 .about_text img, .shop_text img {
   padding: 15px 5px;
+}
+@media (min-width: 550px) {
+  .about_text img:hover, .shop_text img:hover {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
 }
 
 footer {
@@ -345,6 +390,21 @@ footer .foot_syomei {
 h1 {
   margin: 0;
   padding: 0;
+}
+
+#cover_area_list {
+  text-align: center;
+  padding: 40px;
+  max-width: 550px;
+  background-image: url("../images/list/cate_image_sp.jpg");
+  background-size: cover;
+}
+@media (min-width: 550px) {
+  #cover_area_list {
+    background-image: url("../images/list/cate_image.jpg");
+    text-align: left;
+    padding: 80px;
+  }
 }
 
 /*# sourceMappingURL=sample.css.map */

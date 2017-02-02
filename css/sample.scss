@@ -42,12 +42,13 @@ header{
         }
     }
     .sp_navi_btn{
+        margin: 7px;
         cursor: pointer;
     }
     .sp_navi_li{
         width: 180px;
         position: absolute;
-        top: 50px;
+        top: 80px;
         right: 2%;
         border: 1px solid #eee;
         background: white;
@@ -83,9 +84,13 @@ header{
                 list-style: none;
                 margin: 15px 0 0 0;
                 padding: 0;
-                 a{
+                a{
                     float: left;
                     padding-right: 10px;
+                }
+                img:hover{
+                    -webkit-transform: scale(0.8);
+                    transform: scale(0.8);
                 }
             } //li
         }//.pc_navi_li
@@ -146,6 +151,11 @@ header{
         font-size: 1.0rem;
         text-decoration: none;
         padding:5px;
+        @media(max-width:550px){
+            .mask , .caption{
+                display:none;
+            }
+        }
         p{
             margin: 1px 0;
         }
@@ -153,9 +163,43 @@ header{
     @media (min-width: 550px) {
         li{
             width: 30%;
+            height:	auto;
+            .item_img{
+    	        overflow: hidden;
+    	        position: relative;
+                .caption {
+                	   font-size: 2.0rem;
+                	   color: #fff;
+                	   font-weight:bold;
+                	   text-align:  center;
+                	   padding-top: 40%;
+                	   letter-spacing: 2px;
+                	   
+                        }
+                .mask {
+                	width:	100%;
+                	height:	97%;
+                	position: absolute;
+                	top: 0;
+                	left: 0;
+                	opacity: 0;
+                	background-color: rgba(0,0,0,0.4);
+                	-webkit-transform: rotateY(-180deg);
+                	transform: rotateY(-180deg);
+                	-webkit-transition: all 0.6s ease;
+                	transition:	all 0.6s ease;
+                }
+    
+                &:hover .mask {
+                	-webkit-transform: rotateY(0deg);
+                	transform: rotateY(0deg);
+                	opacity: 1;	/* ホバーで表示する */
+                }
+            }//item_img
         }
     }// min-width: 550px
 }//item_boxs
+
 
 .guide_boxs{
     color: black;
@@ -200,36 +244,28 @@ header{
     }// min-width: 550px
 }//guide_boxs
 
-.search{
+#search{
     color: $gray1;
     text-align: left;
     float: left;
-}
-.search_icon{
-    text-align: right;
-}
-.search_bar{
-    background-color: #eeeeee;
-    padding: 0.5em;
-    margin: 8px 0;
-    border-style: solid;
-    border-width: 13px;
-    border-color: white;
-}
-/* .bar_title{
-    text-align: left;
-    background-color: $gray1;
-    color: white;
-    font-size: 1.0rem;
-    padding: 10px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    &:after{
-        position: absolute;
-        content: url("../images/top/next_icon.png");
-        right: 10px;
+    background-color:white;
+    width:100%;
+img{
+    margin:0 5px;
+    width:50%;
+    @media (max-width: 550px) {
+        display:none;
     }
-}*/
+}
+}
+
+.search_bar{
+    height:30px;
+    padding: 0.5em;
+    margin: 10px;
+    background: $backgray url("../images/top/search_icon.png") 95% 50% no-repeat;
+}
+
 
 #sidebar{
     position: relative;
@@ -254,7 +290,6 @@ header{
     color: white;
     letter-spacing: 2px;
     font-size: 1.0rem;
-    width: 95%;
     height: 40px;
     line-height:40px;
     border: none;
@@ -265,13 +300,12 @@ header{
     }
 .oritatami{
     display:block;
-    width:100%;
     margin:0;
     padding:0;
     dl{
         list-style-type:none;
 	    display:inline-block;
-	    width:100%;
+	    width:94%;
 	    margin:0;
 	    padding:0;
 	    dt{
@@ -292,7 +326,10 @@ header{
 .oritatami_title.active{
     background: $gray1 url("../images/top/down_icon.png") 95% 50% no-repeat;
     }
-
+#about , #shopinfo{
+    display:inline-block;
+    background:white;
+}
 .about_title , .shop_title{
     clear: both;
     text-align: left;
@@ -305,7 +342,7 @@ header{
     letter-spacing: 2px;
 }
 .about_image ,.shop_image{
-    width:48%;
+    width:45%;
     float:left;
     margin-right:5px;
 }
@@ -316,7 +353,14 @@ header{
     margin-left: 5px;
     img{
         padding: 15px 5px;
+        @media(min-width:550px){
+            &:hover{
+                -webkit-transform: scale(0.8);
+	            transform: scale(0.8);
+        }
     }
+}
+
 }
 footer{
     padding:20px 0;
@@ -348,3 +392,16 @@ h1{
     margin: 0;
     padding: 0;
 }
+//--------------------list.html-------------------------
+#cover_area_list{
+    text-align: center;
+    padding: 40px;
+    max-width: 550px;
+    background-image: url("../images/list/cate_image_sp.jpg");
+    background-size: cover;
+    @media (min-width: 550px) {
+        background-image: url("../images/list/cate_image.jpg");
+        text-align: left;
+        padding: 80px;
+      } // min-width: 550px
+}//cover_area
