@@ -5,7 +5,7 @@ $myfont :"Avenir Next", Verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Got
 $backgray : #f9f8f6;
 $gray1 : #887f69; //koi
 $gray2 : #b0b0b0;
-$winered : #9d1a2d;
+$gray3 : #e8e4da;
 
 html {
   font-size: 62.5%;
@@ -405,3 +405,38 @@ h1{
         padding: 80px;
       } // min-width: 550px
 }//cover_area
+
+.pan_menu{
+    padding:8px 3px;
+    margin: 8px 0;
+    background-color: $gray3;
+    color: $gray1;
+    letter-spacing: 2px;
+    font-weight: bold;
+    
+}
+.back-next-btn{
+    height: 40px;
+    position: relative;
+}
+.back{
+    position:absolute;
+    left:0;
+    text-decoration:none;
+    margin:2px;
+    color:white;
+    background:$gray1;
+    padding:10px 20px;
+    left:3px;
+    letter-spacing: 2px;
+}
+.next{
+    position:absolute;
+    right:0;
+    margin:2px;
+    text-decoration:none;
+    color:white;
+    background:$gray1;
+    padding:10px 20px;
+    letter-spacing: 2px;
+}
