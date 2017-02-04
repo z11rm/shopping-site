@@ -440,3 +440,125 @@ h1{
     padding:10px 20px;
     letter-spacing: 2px;
 }
+
+
+//product.html---------------
+.product_box{
+    background:white;
+    padding:10px;
+}
+.product_name{
+    color:black;
+    font-size:1.4rem;
+    font-weight:bold;
+    margin:1px;
+}
+.product_ID{
+    color:$gray2;
+    font-size:0.5rem;
+    padding-bottom:15px;
+    border-bottom:thin $gray2 solid;
+    margin:5px;
+}
+#product_display_img img {
+  width: 100%;
+  @media (min-width: 550px) {
+      width:60%;
+  }
+}
+#product_li_img li {
+  list-style: none;
+  display: inline-block;
+  background:$backgray;
+  width: 48px;
+  height: 48px;
+  img {
+      width: 48px;
+      cursor: pointer;
+  }
+}
+.color_size{
+    border-top:thin $gray2 solid;
+    border-bottom:thin $gray2 solid;
+    img{
+        padding:10px 0;
+    }
+}
+.color_size_table {
+    empty-cells: show;
+	border-collapse: separate;
+	border-spacing: 0;
+	line-height: 1.5;
+	border-top: 1px solid $gray2;
+	border-left: 1px solid $gray2;
+     th {
+         text-align: center;
+         width:32%;
+        color:$gray1;
+    	padding: 10px;
+    	font-weight: bold;
+    	vertical-align: top;
+    	border-right: 1px solid $gray2;
+    	border-bottom: 1px solid $gray2;
+    	border-top: 1px solid #fff;
+    	border-left: 1px solid #fff;
+    	background: $backgray;
+    }
+    td {
+        text-align: center;
+    	width: 350px;
+    	padding: 10px;
+    	vertical-align: top;
+    	border-right: 1px solid $gray2;
+    	border-bottom: 1px solid $gray2;
+    }
+}
+
+.price , .quantity{
+    padding:10px 0;
+    border-bottom:thin $gray2 solid;
+}
+.price_info{
+    text-align: center;
+    color: #e80f66;
+    font-size: 2rem;
+    font-style: italic;
+    padding-left: 35px;
+    &:before{
+        content:"￥";
+        font-size: 1.3rem;
+    }
+}
+.tax{
+    color: black;
+}
+.pr_qu{
+ margin:0;
+}
+.add_to_cart{
+    padding:15px;
+     @media (min-width: 550px){
+         display:absolute;
+         top: 1px;
+         right: 1px;
+         
+ }
+}
+.product_info_text_title{
+    font-size:1.5rem;
+    color:$gray1;
+    padding:10px 0;
+    border-bottom:thin $gray2 solid;
+    font-weight:bold;
+}
+.product_info_text_subtitle{
+    font-size:1.5rem;
+    color:$gray1;
+    font-weight:bold;
+    &:before{
+        content:"■";
+    }
+}
+.product_info_text{
+    color:black;
+}
