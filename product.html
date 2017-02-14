@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <!-- Basic Page Needs–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ <!-- Basic Page Needs–––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>APPLE BERRY | Product "商品名"</title>
+  <title>APPLE BERRY</title>
   <meta name="description" content="">
   <meta name="author" content="">
+  
   <!-- Owl Carousel CSS -->
   <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
-  <!-- jQuery -->
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="style.js"></script>
- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.css">
+  
+    <!-- jQuery -->
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  
+  <!-- Owl Carousel JS -->
+  <script type="text/javascript" src="owlcarousel/owl.carousel.min.js"></script>
+  
   <script type="text/javascript" src="style.js" charset="Shift_JIS"></script>
 
-
-
+  
   <!-- Mobile Specific Metas–––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -46,8 +49,8 @@
                 <li><a href="cart.html"><img id="menu_cart" href="cart.html" src="images/top/menu_cart.png"></a></li>
                 <li><a href="mypage.html"><img id="menu_mypage" href="mypage.html" src="images/top/menu_mypage.png" ></a></li>
                 <li><a href="shoppingguide.html"><img id="menu_shoppingguide" href="shoppingguide.html" src="images/top/menu_guide.png" ></a></li>
-                <li><a href=""><img id="fb_btn" src="images/top/facebook.png" srcset="images/top/facebook@2x.png 2x" ></a></li>
-                <li><a href=""><img id="insta_btn" src="images/top/insta.png"  srcset="images/top/insta@2x.png 2x" ></a></li>
+                <li><a href=""><img id="fb_btn" src="images/top/facebook.png"></a></li>
+                <li><a href=""><img id="insta_btn" src="images/top/insta.png"></a></li>
             </ul>
           </div><!-- pc_navi -->
        </div><!--navi columns-->
@@ -75,7 +78,8 @@
                  <div class="product_box">
                      <p class="product_name">商品名が入ります</p>
                      <p class="product_ID">fa0001-91</p>
-                     <div id="product_display_img"><img src="images/products/pro_img_01.jpg" alt=""></div>
+                     <div class="product_imgs"> 
+                     <div class="product_display_img"><img src="images/products/pro_img_01.jpg" alt=""></div>
                      <ul id="product_li_img">
                          <li><img src="images/products/pro_img_01.jpg" alt=""></li>
                          <li><img src="images/products/pro_img_02.jpg" alt=""></li>
@@ -88,6 +92,7 @@
                          <li></li>
                          <li></li>
                      </ul>
+                     </div>
                      <div class="product_info">
                          <div class="color_size">
                              <img src="images/products/title_color.png"/>
@@ -108,14 +113,18 @@
                                 	</tbody>
                             </table>
                          </div><!--color_size-->
-                         <div class="price">
-                             <img src="images/products/title_price.png"/>
-                             <a class="price_info">1,000</a><a class="tax">(tax in)</a>
+                         <div class="p-c-add">
+                           <div class="p-c">
+                             <div class="price">
+                                 <img src="images/products/title_price.png"/>
+                                 <a class="price_info">1,000</a><a class="tax">(tax in)</a>
+                             </div>
+                             <div class="quantity">
+                                 <img src="images/products/title_quantity.png"/>
+                             </div>
+                           </div>
+                           <a href=""><img class="add_to_cart" src="images/products/add_to_cart.png"/></a>
                          </div>
-                         <div class="quantity">
-                             <img src="images/products/title_quantity.png"/>
-                         </div>
-                         <a href=""><img class="add_to_cart" src="images/products/add_to_cart.png"/></a>
                          
                            <p class="product_info_text_title">商品説明</p>
                            <p class="product_info_text_subtitle">説明タイトル説明タイトル説明タイトル説明タイトル</p>
@@ -249,9 +258,5 @@
       </div>
     </div>
   </footer>
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  
-  
-  
 </body>
 </html>

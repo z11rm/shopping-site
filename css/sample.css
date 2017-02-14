@@ -81,6 +81,14 @@ header {
     #cover_area {
       text-align: left; } }
 
+.owl-dots {
+  text-align: left; }
+
+.owl-dot span {
+  border-radius: 0;
+  width: 25px;
+  height: 2px; }
+
 .sp_subtitle {
   display: block;
   margin: auto;
@@ -301,7 +309,7 @@ header {
     padding: 15px 5px; }
     @media (min-width: 550px) {
       .about_text img, .shop_text img {
-        padding: 5% 20%; }
+        padding: 5% 25%; }
         .about_text img:hover, .shop_text img:hover {
           -webkit-transform: scale(0.8);
           transform: scale(0.8); } }
@@ -395,20 +403,39 @@ h1 {
 
 #product_display_img img {
   width: 100%; }
-  @media (min-width: 550px) {
-    #product_display_img img {
-      width: 60%; } }
 
-#product_li_img li {
-  list-style: none;
-  display: inline-block;
-  background: #f9f8f6;
-  width: 48px;
-  height: 48px; }
-  #product_li_img li img {
+#product_li_img {
+  display: flex;
+  flex-wrap: wrap; }
+  #product_li_img li {
+    list-style: none;
+    display: inline-block;
+    background: #f9f8f6;
     width: 48px;
-    cursor: pointer; }
+    height: 48px;
+    padding: 2px; }
+    #product_li_img li img {
+      width: 48px;
+      cursor: pointer; }
 
+@media (min-width: 550px) {
+  .product_imgs {
+    display: flex; }
+
+  .product_display_img {
+    width: 80%; }
+
+  #product_li_img {
+    display: flex;
+    flex-wrap: wrap; }
+    #product_li_img li {
+      width: 70px;
+      height: 70px;
+      background: #f9f8f6;
+      margin: 7px; }
+      #product_li_img li img {
+        width: 100%;
+        cursor: pointer; } }
 .color_size {
   border-top: thin #b0b0b0 solid;
   border-bottom: thin #b0b0b0 solid; }
@@ -429,8 +456,8 @@ h1 {
     padding: 10px;
     font-weight: bold;
     vertical-align: top;
-    border-right: 1px solid #b0b0b0;
-    border-bottom: 1px solid #b0b0b0;
+    border-right: 1px solid #e8e4da;
+    border-bottom: 1px solid #e8e4da;
     border-top: 1px solid #fff;
     border-left: 1px solid #fff;
     background: #f9f8f6; }
@@ -439,8 +466,8 @@ h1 {
     width: 350px;
     padding: 10px;
     vertical-align: top;
-    border-right: 1px solid #b0b0b0;
-    border-bottom: 1px solid #b0b0b0; }
+    border-right: 1px solid #e8e4da;
+    border-bottom: 1px solid #e8e4da; }
 
 .price, .quantity {
   padding: 10px 0;
@@ -456,6 +483,12 @@ h1 {
     content: "￥";
     font-size: 1.5rem; }
 
+@media (min-width: 550px) {
+  .p-c-add {
+    display: flex; }
+
+  .p-c {
+    width: 50%; } }
 .tax {
   color: black; }
 

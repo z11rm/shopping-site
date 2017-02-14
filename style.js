@@ -1,14 +1,4 @@
-$(document).ready(function(){
-    $('.owl-carousel').owlCarousel(
-        {
-            loop: true,
-            nav: false,
-            dots: true,
-            items: 1,
-            autoplay: true
-        }
-    );
-});
+
 //oritatami---------------
 
 $(function () {
@@ -65,4 +55,16 @@ $(window).load(function(){
     var img_src = $(this).attr("src");
     $("#product_display_img img").attr("src", img_src);
   });
+});
+
+
+$(document).ready(function(){
+    $("#cover_area").owlCarousel(
+        {
+            loop: true,
+            nav: false,
+            items: 1,
+            autoplay: true
+        }
+    );
 });
