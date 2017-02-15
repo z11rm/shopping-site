@@ -53,7 +53,7 @@ $(function(){
 $(window).load(function(){
   $("#product_li_img img").click(function(){
     var img_src = $(this).attr("src");
-    $("#product_display_img img").attr("src", img_src);
+    $(".product_display_img img").attr("src", img_src);
   });
 });
 

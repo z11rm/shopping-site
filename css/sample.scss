@@ -116,14 +116,6 @@ header{
         text-align: left;
       } // min-width: 550px
 }//cover_area
-.owl-dots{
-    text-align:left;
-}
-.owl-dot span{
-        border-radius: 0;
-        width: 25px;
-        height: 2px;
-}
 
 .sp_subtitle{
     display: block;
@@ -169,7 +161,7 @@ header{
     }
     @media (min-width: 550px) {
         li{
-            width: 30%;
+            width: 31.5%;
             height:	auto;
             .item_img{
     	        overflow: hidden;
@@ -245,6 +237,7 @@ header{
     }
     @media (min-width: 550px) {
         width: 100%;
+        background:white;
         li{
             width: 48%;
             
@@ -468,6 +461,7 @@ h1{
 
 
 //product.html---------------
+
 .product_box{
     background:white;
     padding:10px;
@@ -486,40 +480,42 @@ h1{
     margin:5px;
 }
 
-#product_display_img img{
+.product_display_img img{
   width: 100%;
-    }
+}
+    
 #product_li_img {
  display:flex;
  flex-wrap: wrap;
-li {
-  list-style: none;
-  display: inline-block;
-  background:$backgray;
-  width: 48px;
-  height: 48px;
-  padding:2px;
-  img {
+    li {
+      list-style: none;
+      display: inline-block;
+      background:$backgray;
       width: 48px;
-      cursor: pointer;
-  }
-}
+      height: 48px;
+      padding:2px;
+      img {
+          width: 48px;
+          cursor: pointer;
+      }
+    }
 }
 @media (min-width: 550px) {
     .product_imgs{
         display:flex;
     }
     .product_display_img{
-        width:80%;
+        width:100%;
     }
     #product_li_img {
+        width:40%;
         display:flex;
-         flex-wrap: wrap;
+        flex-wrap: wrap;
         li {
-            width:70px;
-            height:70px;
+            width:45%;
           background:$backgray;
-          margin:7px;
+          padding: 2px;
+          margin:0;
           img {
               width:100%;
               cursor: pointer;
