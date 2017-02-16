@@ -73,8 +73,7 @@ header {
 
 #cover_area {
   width: 100%;
-  padding: 0;
-  max-width: 550px; }
+  padding: 0; }
   #cover_area img {
     width: 100%; }
   @media (min-width: 550px) {
@@ -132,7 +131,7 @@ header {
           padding-top: 40%;
           letter-spacing: 2px; }
         .item_boxs li .item_img .mask {
-          width: 100%;
+          width: 92%;
           height: 97%;
           position: absolute;
           top: 0;

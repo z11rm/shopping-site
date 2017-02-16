@@ -9,7 +9,6 @@ $gray3 : #e8e4da;
 
 html {
   font-size: 64.5%;
-  background: $backgray;
   font-family: $myfont;
   background-color: $backgray;
 }
@@ -108,7 +107,6 @@ header{
 #cover_area{
     width: 100%;
     padding: 0;
-    max-width: 550px;
     img{
         width:100%;
     }
@@ -176,7 +174,7 @@ header{
                 	   
                         }
                 .mask {
-                	width:	100%;
+                	width:	92%;
                 	height:	97%;
                 	position: absolute;
                 	top: 0;
